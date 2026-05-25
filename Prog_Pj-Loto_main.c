@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------------//
 // Nom du projet 		: Prog_Pj-Loto
 // Nom du fichier 		: Prog_Pj-Loto_main.c
-// Date de création 	: 18.05.2026
+// Date de crÃ©ation 	: 18.05.2026
 // Date de modification : xx.xx.xxxx
 //
 // Auteur 				: CAH (Ch. Allenbach)
@@ -21,14 +21,15 @@
 #include "LotoRules.h"
 
 
-#define PATH "..\\LotoConfig\\"
+#define PATH "..\\LotoConfig\\"  // remonte de 1 dossier depuis la racine du projet
 char Mode[6];
-char simulation;
+char simulation = 0;
 char length;
 char out = 0;
 char InputUser;
 char Name[100];
-char FilePath[100];
+char FilePath[200];
+
 char* strtxt;
 FILE* fp1 = NULL;
 
@@ -37,6 +38,7 @@ void main()
 {
     out = 0; // faux, reste dans la boucle
     str_Rules regle;
+    char Buff[10];
     do {
         printf("gestion fichiers G,mode M, trirage T, Q pour Quitter \n");
         scanf(" %c", &InputUser);
@@ -48,53 +50,63 @@ void main()
             printf("Gestion de fichier\n");
             strcpy(FilePath, PATH);
 
-            //// --- DÉBUT DE L'AJOUT : LISTER LES FICHIERS .TXT ---
-            //printf("\n--- Loto existants ---\n");
-            //WIN32_FIND_DATAA findFileData;
-            //// On cherche tous les .txt dans le dossier courant
-            //HANDLE hFind = FindFirstFileA("*.txt", &findFileData);
+            printf("\n--- Fichiers Loto existants ---\n");
+            WIN32_FIND_DATAA findFileData;
+            char searchPath[250];
 
-            //if (hFind == INVALID_HANDLE_VALUE) {
-            //    printf("Aucun fichier .txt trouve.\n");
-            //}
-            //else {
-            //    do {
-            //        printf("- %s\n", findFileData.cFileName);
-            //    } while (FindNextFileA(hFind, &findFileData) != 0);
-            //    FindClose(hFind);
-            //}
-            //printf("-------------------------------\n\n");
-            //// --- FIN DE L'AJOUT ---
+            // On combine le chemin du dossier avec "*.txt" pour chercher dedans
+            sprintf(searchPath, "%s*.txt", PATH);
+            HANDLE hFind = FindFirstFileA(searchPath, &findFileData);
 
+            if (hFind == INVALID_HANDLE_VALUE) {
+                printf("Aucun fichier .txt trouve ou dossier inexistant.\n");
+            }
+            else {
+                do {
+                    printf("- %s\n", findFileData.cFileName);
+                } while (FindNextFileA(hFind, &findFileData) != 0);
+                FindClose(hFind);
+            }
+            printf("-------------------------------\n\n");
+            // --- FIN DE L'AJOUT ---
+           
             printf("Nom du fichier loto : ");
             scanf("%99s", Name);
 
             length = (char)strlen(Name);
-            if (length <= 70)                                   //Vérification taille du nom
+            if (length <= 70)                                   //VÃ©rification taille du nom
             {
                 strcat(FilePath, Name);
-                strtxt = strstr(FilePath, ".txt");              //Recherche du nom.txt deja existant
-                if (strtxt == NULL)                             //Si n'existe pas le creer
+                strtxt = strstr(FilePath, ".txt");              //Recherche de l'extensionn .txt deja existant
+                if (strtxt == NULL)                             //Si n'existe pas l'ajouter
                     strcat(FilePath, ".txt");
 
                 fp1 = fopen(FilePath, "r");
-                if (fp1 == NULL)                                //Vérification d'un fichier existant
+                if (fp1 == NULL)                                //VÃ©rification d'un fichier existant
                 {
-                    printf("Fichier inexistant, creation en cours du fichier\n");
-                    fp1 = fopen(FilePath, "w");
-                    if (fp1 != NULL)
-                        ConfigRules(&regle);                    //Fonction configuration des regles  
+                    printf("Fichier inexistant, creation du fichier\n");
+                    fp1 = fopen(FilePath, "w+");
+                    
+                    ConfigRules(&regle);                        //Fonction configuration des regles  
                 }
                 else
                 {
                     printf("Fichier trouve !\n");
-                    RecupData(&regle, fp1);                      //Fonction recuperation des regles deja creer
+                    if (fgets(Buff, sizeof(Buff), fp1))
+                    {
+                        rewind(fp1);
+                        RecupData(&regle, fp1);                 //Fonction recuperation des regles deja creer
+                    }
+                    else
+                    {
+                        printf("Fichier vide !\n");
+                        ConfigRules(&regle);
+                    }
                 }
             }
             else
                 printf("Nom trop long !\n");
             break;
-
         case 'M':
         case 'm':
             // Saisie
@@ -103,7 +115,7 @@ void main()
                 do
                 {
                     printf("Choix du mode Simu/Normal\n");
-                    scanf("%5s", &Mode);
+                    scanf("%5s", Mode);
                     if (strcmp(Mode, "Simu") == 0 || strcmp(Mode, "simu") == 0)
                     {
                         simulation = 1;
@@ -130,6 +142,7 @@ void main()
             printf("Tirage\n");
             if (fp1 != NULL)
             {
+                fp1 = fopen(FilePath, "a");
                 // fonctions du tirage
 
             }
@@ -152,6 +165,4 @@ void main()
         WriteConfig(&regle, fp1);
         fclose(fp1);
     }
-
-
 }
