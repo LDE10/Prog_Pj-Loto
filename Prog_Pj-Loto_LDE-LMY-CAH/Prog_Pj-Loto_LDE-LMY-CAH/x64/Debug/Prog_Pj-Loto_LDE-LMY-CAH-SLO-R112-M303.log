@@ -1,0 +1,3 @@
+﻿  GestionLoto.c
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\GestionLoto.c(176,9): warning C4013: 'InsertValue' non défini(e) ; extern retournant int pris par défaut
+  Prog_Pj-Loto_LDE-LMY-CAH.vcxproj -> C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\x64\Debug\Prog_Pj-Loto_LDE-LMY-CAH.exe

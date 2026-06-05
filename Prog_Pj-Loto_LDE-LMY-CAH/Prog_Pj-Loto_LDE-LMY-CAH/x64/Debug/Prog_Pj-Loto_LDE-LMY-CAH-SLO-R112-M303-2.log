@@ -1,0 +1,11 @@
+﻿  GestionLoto.c
+  GestionValeurlotoGagnante.c
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\GestionValeurlotoGagnante.c(56,13): warning C4013: 'strcmp' non défini(e) ; extern retournant int pris par défaut
+  Prog_Pj-Loto_main.c
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_main.c(91,46): warning C4013: 'MostWinning' non défini(e) ; extern retournant int pris par défaut
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_main.c(92,47): warning C4013: 'LeastWinning' non défini(e) ; extern retournant int pris par défaut
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_main.c(99,23): warning C4244: 'fonction' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_main.c(35,10): warning C4101: 'newIndex' : variable locale non référencée
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_main.c(38,10): warning C4101: 'c' : variable locale non référencée
+  Génération de code en cours...
+  Prog_Pj-Loto_LDE-LMY-CAH.vcxproj -> C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\x64\Debug\Prog_Pj-Loto_LDE-LMY-CAH.exe
