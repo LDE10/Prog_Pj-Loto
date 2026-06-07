@@ -27,6 +27,12 @@ Au lancement du programme l'utilisateur aura  6 choix possible :
 
 <img width="955" height="222" alt="image" src="https://github.com/user-attachments/assets/738c11f4-ff43-4681-8fd4-1c3ef72c37f3" />
 
+G (Ficher) : Sélection d'un ficher ou la création de fichier si l'utilisateur à écrit le nom d'un fichier inéxistant
+
+M (Mode) : Sélection de deux mode, simulation ou normal
+
+  * dedede
+
 
 ## Contribution
 
