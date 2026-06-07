@@ -61,6 +61,9 @@ T (Tirage) : le tirage du loto changera en fonction du mode choisi, de plus en m
 
 R (Règle) : Affiche les informations concernant les conditions de jeu du fichier choisi (ex : valeur min et max, numéro complémentaire etc)
 
+<img width="482" height="120" alt="image" src="https://github.com/user-attachments/assets/ae9f5b30-73ad-4dac-8cd3-7fe7d65e44bc" />
+
+
 H (Historique) : Affiche toute la liste des tirages effectué jusqu'à présent
 
 Q (Quitter) : Ferme le programme et sauvegarde les tirages effectué dans le fichier choisi
