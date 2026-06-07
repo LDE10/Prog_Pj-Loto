@@ -2,7 +2,7 @@
 
 ## À propos
 
-[Courte description à propos de pourquoi le projet existe]
+Le projet consiste à réaliser un programme en C, permettant de faire une analyse (statistique) des numéros de loto que l’on a joué.
 
 ## Table des matières
 
@@ -18,7 +18,9 @@
 
 ## Prérequis
 
-[Liste de tous les éléments nécessaires pour le bon fonctionnement du projet avec description + lien vers la documentation]
+exemple du rendu final
+<img width="425" height="277" alt="image" src="https://github.com/user-attachments/assets/a6587d39-e90f-4303-aec3-39a5e9e3dd37" />
+
 
 ## Installation
 
