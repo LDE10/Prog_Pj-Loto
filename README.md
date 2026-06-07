@@ -59,6 +59,7 @@ T (Tirage) : le tirage du loto changera en fonction du mode choisi, de plus en m
 
 :warning: Attention : L'utilisateur ne peut pas choisir le tirage sans avoir choisi un fichier, cependant le mode est par défaut choisi en mode simulation
 
+
 R (Règle) : Affiche les informations concernant les conditions de jeu du fichier choisi (ex : valeur min et max, numéro complémentaire etc)
 
 <img width="482" height="120" alt="image" src="https://github.com/user-attachments/assets/ae9f5b30-73ad-4dac-8cd3-7fe7d65e44bc" />
@@ -67,6 +68,8 @@ R (Règle) : Affiche les informations concernant les conditions de jeu du fichie
 H (Historique) : Affiche toute la liste des tirages effectué jusqu'à présent
 
 <img width="647" height="212" alt="image" src="https://github.com/user-attachments/assets/ad630438-7a64-4519-ba89-b4ccc7b879a5" />
+
+:warning: Attention : Lors des permiers tirages les 6 moins bon numéros sont pris dans l'ordre croissant il éxiste plus de 6 chiffres qui sont moins bon, plus il y aura de tirage plus le résultat sera précis
 
 
 Q (Quitter) : Ferme le programme et sauvegarde les tirages effectué dans le fichier choisi
