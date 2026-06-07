@@ -47,9 +47,13 @@ M (Mode) : Sélection de deux mode, simulation ou normal
 
 T (Tirage) : le tirage du loto changera en fonction du mode choisi 
 
-  * Mode simu : <img width="767" height="247" alt="image" src="https://github.com/user-attachments/assets/29809bbd-bf66-4b8b-893d-7763668886b1" />
+  * Mode simu :
 
-  * Mode normal : <img width="842" height="647" alt="image" src="https://github.com/user-attachments/assets/788639ab-d8ce-47ce-93a4-2dcb3a9913a6" />
+<img width="767" height="247" alt="image" src="https://github.com/user-attachments/assets/29809bbd-bf66-4b8b-893d-7763668886b1" />
+
+  * Mode normal :
+
+<img width="842" height="647" alt="image" src="https://github.com/user-attachments/assets/788639ab-d8ce-47ce-93a4-2dcb3a9913a6" />
 
 
 
