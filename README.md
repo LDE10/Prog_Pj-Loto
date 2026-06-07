@@ -42,6 +42,9 @@ M (Mode) : Sélection de deux mode, simulation ou normal
   * Simulation : le jeu se fera automatiquement en affichant les résultats
   * Normal : l'utilisateur pourra choisir 6 chiffre lors du tirage
 
+<img width="442" height="66" alt="image" src="https://github.com/user-attachments/assets/590fde67-66f4-483e-9999-88d625dccac7" />
+
+
 T (Tirage) : le tirage du loto changera en fonction du mode choisi 
 
 :warning: Attention : L'utilisateur ne peut pas choisir le tirage sans avoir choisi un fichier, cependant le mode est par défaut choisi en mode simulation
