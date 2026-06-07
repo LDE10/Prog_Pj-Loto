@@ -45,7 +45,7 @@ M (Mode) : Sélection de deux mode, simulation ou normal
 <img width="442" height="66" alt="image" src="https://github.com/user-attachments/assets/590fde67-66f4-483e-9999-88d625dccac7" />
 
 
-T (Tirage) : le tirage du loto changera en fonction du mode choisi 
+T (Tirage) : le tirage du loto changera en fonction du mode choisi, de plus en mode normal l'utilisateur à le choix de modifier un numéro choisi 
 
   * Mode simu :
 
