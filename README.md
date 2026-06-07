@@ -8,7 +8,6 @@ Le projet consiste à réaliser un programme en C, permettant de faire une analy
 
 - 🪧 [À propos](#à-propos)
 - 📦 [Prérequis](#prérequis)
-- 🚀 [Installation](#installation)
 - 🛠️ [Utilisation](#utilisation)
 - 🤝 [Contribution](#contribution)
 - 🏗️ [Construit avec](#construit-avec)
@@ -19,16 +18,15 @@ Le projet consiste à réaliser un programme en C, permettant de faire une analy
 ## Prérequis
 
 exemple du rendu final
+
 <img width="425" height="277" alt="image" src="https://github.com/user-attachments/assets/a6587d39-e90f-4303-aec3-39a5e9e3dd37" />
-
-
-## Installation
-
-[Étapes avec exemples des commandes à lancer pour installer le projet en local]
 
 ## Utilisation
 
-[### Sous-titre + description avec exemple des commandes à lancer pour l'ensemble des actions disponibles à l'utilisation dans un mode de développement]
+Au lancement du programme l'utilisateur aura  6 choix possible :
+
+<img width="955" height="222" alt="image" src="https://github.com/user-attachments/assets/738c11f4-ff43-4681-8fd4-1c3ef72c37f3" />
+
 
 ## Contribution
 
@@ -38,7 +36,7 @@ exemple du rendu final
 
 ### Langages & Frameworks
 
-[Liste de tout ce qui permet la confection du projet avec description + lien vers la documentation]
+Codé entièrement en C avec VisualStudio
 
 ### Outils
 
