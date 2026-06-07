@@ -33,7 +33,7 @@ G (Ficher) : Sélection d'un ficher ou création de fichier
 
 
 Si un nom de fichier n'éxiste pas, l'utilisateur à le choix d'en créer un nouveau
-<img width="492" height="112" alt="image" src="https://github.com/user-attachments/assets/6cb8d2f2-ae5b-48df-9530-a5a7bd6a7fb9" />
+<img width="777" height="210" alt="image" src="https://github.com/user-attachments/assets/9e7cbed5-d23c-42c8-8067-2cf48be0ca49" />
 
 
 
