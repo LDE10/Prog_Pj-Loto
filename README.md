@@ -31,7 +31,12 @@ G (Ficher) : Sélection d'un ficher ou la création de fichier si l'utilisateur 
 
 M (Mode) : Sélection de deux mode, simulation ou normal
 
-  * dedede
+  * Simulation : le jeu se fera automatiquement en affichant les résultats
+  * Normal : l'utilisateur pourra choisir 6 chiffre lors du tirage
+
+T (Tirage) : le tirage du loto changera en fonction du mode choisi 
+
+[!WARNING] L'utilisateur ne peut pas choisir le tirage sans avoir choisi un fichier, cependant le mode est par défaut choisi en mode siimulation
 
 
 ## Contribution
