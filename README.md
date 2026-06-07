@@ -66,7 +66,12 @@ R (Règle) : Affiche les informations concernant les conditions de jeu du fichie
 
 H (Historique) : Affiche toute la liste des tirages effectué jusqu'à présent
 
+<img width="647" height="212" alt="image" src="https://github.com/user-attachments/assets/ad630438-7a64-4519-ba89-b4ccc7b879a5" />
+
+
 Q (Quitter) : Ferme le programme et sauvegarde les tirages effectué dans le fichier choisi
+
+<img width="687" height="26" alt="image" src="https://github.com/user-attachments/assets/035b89d2-00e1-4ec4-b3e3-ebbf31f16f7d" />
 
 
 ## Contribution
