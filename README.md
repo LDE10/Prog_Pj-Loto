@@ -36,7 +36,9 @@ M (Mode) : Sélection de deux mode, simulation ou normal
 
 T (Tirage) : le tirage du loto changera en fonction du mode choisi 
 
-:warning: L'utilisateur ne peut pas choisir le tirage sans avoir choisi un fichier, cependant le mode est par défaut choisi en mode siimulation
+:warning: Attention : L'utilisateur ne peut pas choisir le tirage sans avoir choisi un fichier, cependant le mode est par défaut choisi en mode siimulation
+
+R (Règle) : 
 
 
 ## Contribution
