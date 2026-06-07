@@ -38,7 +38,11 @@ T (Tirage) : le tirage du loto changera en fonction du mode choisi
 
 :warning: Attention : L'utilisateur ne peut pas choisir le tirage sans avoir choisi un fichier, cependant le mode est par défaut choisi en mode simulation
 
-R (Règle) : 
+R (Règle) : Affiche les informations concernant les conditions de jeu du fichier choisi (ex : valeur min et max, numéro complémentaire etc)
+
+H (Historique) : Affiche toute la liste des tirages effectué jusqu'à présent
+
+Q (Quitter) : Ferme le programme et sauvegarde les tirages effectué dans le fichier choisi
 
 
 ## Contribution
