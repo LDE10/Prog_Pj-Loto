@@ -110,7 +110,7 @@ int main()
             // vérification de si un stream est ouvert. empeche le tirage si aucun fichier est ouvert
             if (fp1 != NULL)
             {
-                // Le reste de votre code (srand, ChoiceValue, Tirage...) reste identique
+                // set une graine pour la fonction random dans Tirage
                 srand(time(NULL));
                 // valeurs entrées par l'utilisateur ou aléatoirement
                 ChoiceValue(Value.tbValue, simu, NbCompl, &regle);
