@@ -71,9 +71,9 @@ Q (Quitter) : Ferme le programme et sauvegarde les tirages effectué dans le fic
 
 <img width="687" height="26" alt="image" src="https://github.com/user-attachments/assets/035b89d2-00e1-4ec4-b3e3-ebbf31f16f7d" />
 
-## Langages & Frameworks
+### Langages & Frameworks
 
-Codé entièrement en C avec VisualStudio
+Codé entièrement en C avec VisualStudio :
 
 ## Documentation
 
