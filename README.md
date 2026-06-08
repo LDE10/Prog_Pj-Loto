@@ -6,11 +6,10 @@ Le projet consiste à réaliser un programme en C, permettant de faire une analy
 
 ## Table des matières
 
-- 🪧 [À propos](#à-propos)
+- 🪧 [OBJECTIF](#OBJECTIF)
 - 📦 [Prérequis](#prérequis)
+- 🚀 [Installation](#installation)
 - 🛠️ [Utilisation](#utilisation)
-- 🤝 [Langages & Frameworks](#Langages & Frameworks)
-- 🏗️ [Construit avec](#construit-avec)
 - 📚 [Documentation](#documentation)
 
 ## Prérequis
