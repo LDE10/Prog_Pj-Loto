@@ -77,4 +77,4 @@ Codé entièrement en C avec VisualStudio :
 
 ## Documentation
 
-[Lien vers documentations externes ou documentation embarquée ici avec table des matières]
+Cahier des charges : 
