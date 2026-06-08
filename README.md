@@ -77,4 +77,4 @@ Codé entièrement en C avec VisualStudio :
 
 ## Documentation
 
-Cahier des charges : 
+Cahier des charges : [test](https://github.com/LDE10/Prog_Pj-Loto/blob/main/PROJET_PROG_V02.pdf)
