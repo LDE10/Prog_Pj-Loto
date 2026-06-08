@@ -1,6 +1,6 @@
 # Prog_Pj-Loto
 
-## À propos
+## Objectif
 
 Le projet consiste à réaliser un programme en C, permettant de faire une analyse (statistique) des numéros de loto que l’on a joué.
 
