@@ -34,7 +34,7 @@ Si un nom de fichier n'éxiste pas, l'utilisateur à le choix d'en créer un nou
 
 
 
-M (Mode) : Sélection de deux mode, simulation ou normal
+M (Mode) : Sélection de deux modes : simulation ou normal
 
   * Simulation : le jeu se fera automatiquement en affichant les résultats
   * Normal : l'utilisateur pourra choisir 6 chiffre lors du tirage
@@ -42,7 +42,7 @@ M (Mode) : Sélection de deux mode, simulation ou normal
 <img width="442" height="66" alt="image" src="https://github.com/user-attachments/assets/590fde67-66f4-483e-9999-88d625dccac7" />
 
 
-T (Tirage) : le tirage du loto changera en fonction du mode choisi, de plus en mode normal l'utilisateur à le choix de modifier un numéro choisi 
+T (Tirage) : le tirage du loto changera en fonction du mode choisi. En mode normal l'utilisateur à le choix de modifier un numéro choisi 
 
   * Mode simu :
 
@@ -52,7 +52,7 @@ T (Tirage) : le tirage du loto changera en fonction du mode choisi, de plus en m
 
 <img width="842" height="647" alt="image" src="https://github.com/user-attachments/assets/788639ab-d8ce-47ce-93a4-2dcb3a9913a6" />
 
-:warning: Attention : L'utilisateur ne peut pas choisir le tirage sans avoir choisi un fichier, cependant le mode est par défaut choisi en mode simulation
+:warning: Attention : L'utilisateur ne peut pas choisir le tirage sans avoir choisi un fichier. Le mode est par défaut séléctionné en mode simulation
 
 
 R (Règle) : Affiche les informations concernant les conditions de jeu du fichier choisi (ex : valeur min et max, numéro complémentaire etc)
@@ -60,14 +60,14 @@ R (Règle) : Affiche les informations concernant les conditions de jeu du fichie
 <img width="482" height="120" alt="image" src="https://github.com/user-attachments/assets/ae9f5b30-73ad-4dac-8cd3-7fe7d65e44bc" />
 
 
-H (Historique) : Affiche toute la liste des tirages effectué jusqu'à présent
+H (Historique) : Affiche toute la liste des tirages effectués jusqu'à présent
 
 <img width="647" height="212" alt="image" src="https://github.com/user-attachments/assets/ad630438-7a64-4519-ba89-b4ccc7b879a5" />
 
-:warning: Attention : Lors des permiers tirages les 6 moins bon numéros sont pris dans l'ordre croissant il éxiste plus de 6 chiffres qui sont moins bon, plus il y aura de tirage plus le résultat sera précis
+:warning: Attention : Lors des permiers tirages les 6 moins bon numéros sont pris dans l'ordre croissant. Il éxiste plus de 6 chiffres qui sont moins bon, plus il y aura de tirage plus le résultat sera précis
 
 
-Q (Quitter) : Ferme le programme et sauvegarde les tirages effectué dans le fichier choisi
+Q (Quitter) : Ferme le programme et sauvegarde les tirages effectués dans le fichier choisi
 
 <img width="687" height="26" alt="image" src="https://github.com/user-attachments/assets/035b89d2-00e1-4ec4-b3e3-ebbf31f16f7d" />
 
