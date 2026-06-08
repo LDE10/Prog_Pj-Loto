@@ -53,8 +53,6 @@ T (Tirage) : le tirage du loto changera en fonction du mode choisi, de plus en m
 
 <img width="842" height="647" alt="image" src="https://github.com/user-attachments/assets/788639ab-d8ce-47ce-93a4-2dcb3a9913a6" />
 
-
-
 :warning: Attention : L'utilisateur ne peut pas choisir le tirage sans avoir choisi un fichier, cependant le mode est par défaut choisi en mode simulation
 
 
