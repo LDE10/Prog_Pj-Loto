@@ -27,7 +27,7 @@ typedef struct
     int nbHistoRows;     // Nombre de tirages stockés dans l'historique
 } str_Value;
 
-str_Value Value;
+extern str_Value Value;
 
 
 void ExistingFile();

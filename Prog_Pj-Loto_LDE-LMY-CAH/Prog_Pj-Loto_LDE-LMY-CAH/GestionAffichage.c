@@ -14,6 +14,7 @@
 //-- librairie standard --//
 #include <stdio.h>
 #include <string.h>
+//Librairie perso
 #include "GestionAffichage.h"
 
 
@@ -24,7 +25,6 @@
 // paramètre out	: -
 // paramètre in/out	: -
 // description		: Afficher le chiffre le plus et moins gagnant
-//--------------------------------------------------------------------------
 void ValG(int* tbMostWinning, int* tbLeastWinning)
 {
 	printf("Le chiffre le plus gagnant est %d\n",tbMostWinning[0]);
@@ -38,7 +38,6 @@ void ValG(int* tbMostWinning, int* tbLeastWinning)
 // paramètre out	: -
 // paramètre in/out	: -
 // description		: Afficher les chiffres les plus et moins gagnant
-//--------------------------------------------------------------------------
 void Bestchiffres(int* tbMostWinning, int* tbLeastWinning)
 {
 	printf("les 6 meilleurs chiffres sorties le plus souvent sont\n %d, %d, %d, %d, %d, %d\n",

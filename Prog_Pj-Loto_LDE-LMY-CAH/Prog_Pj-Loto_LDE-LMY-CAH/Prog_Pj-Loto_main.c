@@ -38,6 +38,7 @@ int main()
     char c;
     FILE* fp1 = NULL;
     FILE* fpregle = NULL;
+
     printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n");
     printf("|                    Projet de programation LOTO                            |  \n");
     printf("|                     Fait par : CAH, LDE, LMY                              |  \n");
@@ -46,6 +47,7 @@ int main()
     do {
         printf("G pour choisir le fichiers \nM pour changer Mode \nT pour lancer un Tirage \n");
         printf("R pour afficher les regle\nH pour afficher l'historique \nQ pour Quitter \n");
+        // enregistre le premier caractère entré par l'utilisateur
         InputUser = Input();
 
         switch (InputUser)
@@ -54,26 +56,35 @@ int main()
         case 'g':
 
             printf("\nGestion de fichier\n");
-            ExistingFile();                                 // fonction de lecture des fichier existant
+            // fonction de lecture des fichier existant dans le dossier ConfigLoto(chemin relatif depuis 
+            // la racine du projet)
+            ExistingFile();                                 
+            // vérification de si un stream est ouvert. empeche d'ouvrir un autre fichier
             if (fp1 == NULL)
             {
                 printf("Nom du loto : ");
-
-                ConfigFile();                               // configuration du fichier/loto
+                // configuration du fichier/loto
+                ConfigFile();                    
+                // ouverture du stream en mode lecture
                 fp1 = fopen(FilePath, "r");
+                // allocation des tableaux
                 Value.tbValue = (int*)malloc(NbCompl * sizeof(int));
                 Value.tbTirage = (int*)malloc(NbCompl * sizeof(int));
                 Value.tbMostWinning = (int*)malloc(6 * sizeof(int));
                 Value.tbLeastWinning = (int*)malloc(6 * sizeof(int));
-
+                // affiche le nombre de tirage déjà éffectué dans le fichier
+                AddTirageToHisto(&Value, NbCompl);
                 for (int y = 0; y < 6; y++)
                 {
+                    // trouve les 6 numéros sorti le plus souvent
                     Value.tbMostWinning[y] = MostWinning(&Value, NbCompl, &regle, y);
+                    // trouve les 6 numéros sorti le moins souvent
                     Value.tbLeastWinning[y] = LeastWinning(&Value, NbCompl, &regle, y);
                 }
-
-                // 2. Affichage APRÈS la fin de la boucle
+                
+                // affiche les numéros le plus et le moins sorti
                 Bestchiffres(Value.tbMostWinning, Value.tbLeastWinning);
+                // affiche le numéro le plus et le moins sorti
                 ValG(Value.tbMostWinning, Value.tbLeastWinning);
                 printf("\n\n");
             }
@@ -82,10 +93,11 @@ int main()
             break;
         case 'M':
         case 'm':
+            // vérification de si un stream est ouvert. empeche de choisir un mode si aucun fichier est ouvert
             if (fp1 != NULL)
             {
                 printf("Choix du mode Simu/Normal pour %s\n", regle.NameLoto);
-
+                // Sélection du mode
                 simu = ModeLoto(Mode);
             }
             else
@@ -95,9 +107,9 @@ int main()
         case 'T':
         case 't':
             printf("\nTirage pour %s\n", regle.NameLoto);
+            // vérification de si un stream est ouvert. empeche le tirage si aucun fichier est ouvert
             if (fp1 != NULL)
             {
-
                 // Le reste de votre code (srand, ChoiceValue, Tirage...) reste identique
                 srand(time(NULL));
                 // valeurs entrées par l'utilisateur ou aléatoirement
@@ -113,25 +125,25 @@ int main()
                 printf("\n");
                 // ajout du dernier tirage dans l'historique
                 AddTirageToHisto(&Value, NbCompl);
+                // alloue le tableau de win au nombre de numéro du loto
                 Value.tbWin = (int*)malloc(NbCompl * sizeof(int));
+                // comparaison de numéro choisi et tiré
                 Win(&Value, &regle);
                 printf("\n");
             }
             else
                 printf("\nFichier non ouvert !\n");
             break;
-
-        case 'Q':
-        case 'q':
-            out = 1;
-            break;
-
         case 'R':
         case 'r':
+            // vérification de si un stream est ouvert. empeche d'afficher les règles si aucun fichier est ouvert
+
             if (fp1 != NULL)
             {
+                // ouverture d'un stream en mode lecture pour afficher les règles
                 fpregle = fopen(FilePath, "r");
                 if (fpregle != NULL)
+                    // récupération des règles
                     RecupData(&regle, fpregle);
                 fclose(fpregle);
             }
@@ -141,38 +153,48 @@ int main()
             break;
         case 'H':
         case 'h':
+            // vérification de si un stream est ouvert. empeche d'afficher l'historique si aucun fichier est ouvert
+
             if (fp1 != NULL)
             {
                 RecupHisto(&Value, fp1, NbCompl, InputUser);
                 // 1. Remplissage complet des tableaux (Boucle uniquement pour le calcul)
                 for (int y = 0; y < 6; y++)
                 {
+                    // trouve les 6 numéros sorti le plus souvent
                     Value.tbMostWinning[y] = MostWinning(&Value, NbCompl, &regle, y);
+                    // trouve les 6 numéros sorti le moins souvent
                     Value.tbLeastWinning[y] = LeastWinning(&Value, NbCompl, &regle, y);
                 }
-
-                // 2. Affichage APRÈS la fin de la boucle
+                // affiche les numéros le plus et le moins sorti
                 Bestchiffres(Value.tbMostWinning, Value.tbLeastWinning);
+                // affiche le numéro le plus et le moins sorti
                 ValG(Value.tbMostWinning, Value.tbLeastWinning);
             }
             else
                 printf("\nFichier non ouvert !\n");
             break;
-
+        case 'Q':
+        case 'q':
+            // permet la sortie de la boucle
+            out = 1;
+            break;
 
         default:
-            printf("\nerreur de saisie\n");
+            printf("\nerreur de saisie\n\n");
         }
-
-        // affichage + traitement de donnée
+        // sortie de boucle
     } while (out == 0);
 
     if (fp1 != NULL)
     {
         fclose(fp1);
+        // ouverture du stream en mode écriture
         fp1 = fopen(FilePath, "w");
+        // écrit toutes les data dans le fichier
         SaveAllData(&regle, &Value, fp1, NbCompl);
         fclose(fp1);
     }
+    // libére toute la mémoire allouée
     freetb();
 }

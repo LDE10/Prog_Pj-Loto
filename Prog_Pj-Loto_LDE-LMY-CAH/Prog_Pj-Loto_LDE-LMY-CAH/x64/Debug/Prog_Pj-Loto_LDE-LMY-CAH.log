@@ -1,2 +1,14 @@
-﻿  GestionAffichage.c
+﻿  GestionLoto.c
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\GestionLoto.c(48,10): warning C4101: 'test' : variable locale non référencée
+  LotoRules.c
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\LotoRules.c(118,13): warning C4013: 'strstr' non défini(e) ; extern retournant int pris par défaut
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\LotoRules.c(118,46): warning C4047: '!=' : les niveaux d'indirection de 'int' et de 'void *' sont différents
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\LotoRules.c(124,58): warning C4047: '!=' : les niveaux d'indirection de 'int' et de 'void *' sont différents
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\LotoRules.c(129,63): warning C4047: '!=' : les niveaux d'indirection de 'int' et de 'void *' sont différents
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\LotoRules.c(134,80): warning C4047: '!=' : les niveaux d'indirection de 'int' et de 'void *' sont différents
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\LotoRules.c(139,80): warning C4047: '!=' : les niveaux d'indirection de 'int' et de 'void *' sont différents
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\LotoRules.c(144,57): warning C4047: '!=' : les niveaux d'indirection de 'int' et de 'void *' sont différents
+C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\Prog_Pj-Loto_LDE-LMY-CAH\LotoRules.c(146,50): warning C4047: '!=' : les niveaux d'indirection de 'int' et de 'void *' sont différents
+  Génération de code en cours...
+  LINK : C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\x64\Debug\Prog_Pj-Loto_LDE-LMY-CAH.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
   Prog_Pj-Loto_LDE-LMY-CAH.vcxproj -> C:\Users\chrallenbac\OneDrive - Education Vaud\Fichiers de Luc Derré - Prog_Pj-Loto\Prog_Pj-Loto_LDE-LMY-CAH\x64\Debug\Prog_Pj-Loto_LDE-LMY-CAH.exe

@@ -18,16 +18,16 @@
     <ClCompile Include="Prog_Pj-Loto_main.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="LotoRules.c">
+    <ClCompile Include="GestionAffichage.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="GestionLoto.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="GestionAffichage.c">
+    <ClCompile Include="GestionValeurlotoGagnante.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="GestionValeurlotoGagnante.c">
+    <ClCompile Include="LotoRules.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

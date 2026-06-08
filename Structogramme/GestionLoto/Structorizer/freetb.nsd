@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.30-10" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" author="lucderre" created="2026-06-03" changedby="chrallenbac" changed="2026-06-08" origin="Structorizer 3.30-10" text="&#34;// nom fonction  : freetb&#34;,&#34;// paramètre In  : &#34;,&#34;// paramètre out : &#34;,&#34;// paramètre in/out : &#34;,&#34;// description  : Libère la mémoire&#34;" comment="" color="ffffff" type="sub" style="nice">
+	<children>
+		<alternative text="&#34;if(Value.tbHistoTirage != NULL)&#34;" comment="" color="ffffff" disabled="0">
+			<qTrue>
+				<for text="&#34;for i &#60;- 0 to Value.nbHistoRows&#34;" comment="" counterVar="i" startValue="0" endValue="Value.nbHistoRows" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
+					<qFor>
+						<call text="&#34;free(Value.tbHistoTirage[i])&#34;" comment="" color="00cccc" disabled="0"></call>
+					</qFor>
+				</for>
+				<call text="&#34;free(Value.tbHistoTirage)&#34;" comment="" color="00cccc" disabled="0"></call>
+			</qTrue>
+			<qFalse>
+				<instruction text="" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qFalse>
+		</alternative>
+		<call text="&#34;free(Value.tbValue)&#34;" comment="" color="00cccc" disabled="0"></call>
+		<call text="&#34;free(Value.tbWin)&#34;" comment="" color="00cccc" disabled="0"></call>
+		<call text="&#34;free(Value.tbMostWinning)&#34;" comment="" color="00cccc" disabled="0"></call>
+		<call text="&#34;free(Value.tbLeastWinning)&#34;" comment="" color="00cccc" disabled="0"></call>
+	</children>
+</root>

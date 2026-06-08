@@ -128,10 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GestionAffichage.c" />
+    <ClCompile Include="GestionLoto.c" />
     <ClCompile Include="GestionValeurlotoGagnante.c" />
     <ClCompile Include="LotoRules.c" />
     <ClCompile Include="Prog_Pj-Loto_main.c" />
-    <ClCompile Include="GestionLoto.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GestionAffichage.h" />

@@ -22,8 +22,6 @@
 #include <stdbool.h>
 #include "LotoRules.h"
 
-
-
 // Fonction
 // nom fonction		: ConfigRules
 // paramètre In		: 
@@ -88,7 +86,6 @@ void ConfigRules(str_Rules* r)
 //----------------------------------------------------------------------------------
 void WriteConfig(str_Rules* r, FILE* fp1)
 {
-    
     fprintf(fp1, "regle du loto:\n");
     fprintf(fp1, "Valeur Min du loto: %d\n", r->ValMin);
     fprintf(fp1, "Valeur Max du loto: %d\n", r->ValMax);

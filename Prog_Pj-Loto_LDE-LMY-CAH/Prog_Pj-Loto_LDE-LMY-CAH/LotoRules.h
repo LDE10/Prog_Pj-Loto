@@ -26,14 +26,14 @@ typedef struct
 	int NumComplMin;
 } str_Rules;
 
-str_Rules regle;
+extern str_Rules regle;
 
-char NbCompl;
+extern char NbCompl;
 
-char FilePath[100];
-char length;
-char Name[100];
-char* strtxt;
+extern char FilePath[100];
+extern char length;
+extern char Name[100];
+extern char* strtxt;
 
 
 void ConfigRules(str_Rules* r);
