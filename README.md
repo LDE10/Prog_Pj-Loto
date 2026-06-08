@@ -74,8 +74,22 @@ Q (Quitter) : Ferme le programme et sauvegarde les tirages effectués dans le fi
 
 ### Langages & Frameworks
 
-Codé entièrement en C avec VisualStudio :
+Codé entièrement en C avec VisualStudio : [Main](https://github.com/LDE10/Prog_Pj-Loto/tree/main/Prog_Pj-Loto_LDE-LMY-CAH/Prog_Pj-Loto_LDE-LMY-CAH)
 
 ## Documentation
 
-Cahier des charges : [test](https://github.com/LDE10/Prog_Pj-Loto/blob/main/PROJET_PROG_V02.pdf)
+[Cahier des charges](https://github.com/LDE10/Prog_Pj-Loto/blob/main/PROJET_PROG_V02.pdf)
+
+Journal de travail :
+ * [Journal de travail groupe](https://github.com/LDE10/Prog_Pj-Loto/blob/main/journal_de_travail/journal_de_travail_Groupe.pdf)
+ * [CAH](https://github.com/LDE10/Prog_Pj-Loto/blob/main/journal_de_travail/journal_de_travail_CAH.pdf)
+ * [LDE](https://github.com/LDE10/Prog_Pj-Loto/blob/main/journal_de_travail/journal_de_travail_LDE.pdf)
+ * [LMY](https://github.com/LDE10/Prog_Pj-Loto/blob/main/journal_de_travail/journal_de_travail_LMY.pdf)
+ 
+
+Structogramme : 
+ * [Main](https://github.com/LDE10/Prog_Pj-Loto/blob/main/Structogramme/Prog_Pj-Loto_LDE-LMY-CAH_main.pdf)
+ * [Affichage Gestion](https://github.com/LDE10/Prog_Pj-Loto/tree/main/Structogramme/AffichageGestion)
+ * [Gestion Loto](https://github.com/LDE10/Prog_Pj-Loto/tree/main/Structogramme/GestionLoto)
+ * [Gestion Valeur Gagnant](https://github.com/LDE10/Prog_Pj-Loto/tree/main/Structogramme/GestionValeurLotoGagnant)
+ * [Loto Rules](https://github.com/LDE10/Prog_Pj-Loto/tree/main/Structogramme/LotoRules)
