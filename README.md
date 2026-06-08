@@ -8,7 +8,6 @@ Le projet consiste à réaliser un programme en C, permettant de faire une analy
 
 - 🪧 [OBJECTIF](#OBJECTIF)
 - 📦 [Prérequis](#prérequis)
-- 🚀 [Installation](#installation)
 - 🛠️ [Utilisation](#utilisation)
 - 📚 [Documentation](#documentation)
 
