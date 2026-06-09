@@ -1,10 +1,10 @@
 //-----------------------------------------------------------------------------------//
 // Nom du projet 		: ProjetLoto
 // Nom du fichier 		: GestionValeurlotoGagnante.c
-// Date de crÈation 	: 18.05.2026
+// Date de cr√©ation 	: 18.05.2026
 // Date de modification : 18.05.2026
 //
-// Auteur 				: LMY (LoÔc Marmy)
+// Auteur 				: LMY (Lo√Øc Marmy)
 //
 // Description          : programme principale 
 //
@@ -22,12 +22,11 @@
 #include "GestionLoto.h"
 #include "GestionValeurlotoGagnante.h"
 
-// Fonction
-// nom fonction		: 
-// paramËtre In		: str_Rules* r
-// paramËtre out	: 
-// paramËtre in/out	: str_Value* v
-// description		: Entree des valeurs et gestions
+// nom fonction  : InsertValue
+// param√®tre In  : str_Rules* r
+// param√®tre out : 
+// param√®tre in/out : str_Value* v
+// description  : Entree et gestions des valeurs de l'utilisateur
 //----------------------------------------------------------------------------------
 void InsertValue(str_Value* v, str_Rules* r)
 {
@@ -39,7 +38,7 @@ void InsertValue(str_Value* v, str_Rules* r)
 
     while (i < nbElements)
     {
-        // DÈtermination des bornes selon qu'on saisit un numÈro normal ou le complÈmentaire
+        // D√©termination des bornes selon qu'on saisit un num√©ro normal ou le compl√©mentaire
         int minCourant = (r->NumCompl == 'o' && i == nbElements - 1) ? r->NumComplMin : r->ValMin;
         int maxCourant = (r->NumCompl == 'o' && i == nbElements - 1) ? r->NumComplMax : r->ValMax;
 
@@ -55,28 +54,28 @@ void InsertValue(str_Value* v, str_Rules* r)
         // Commande de suppression
         if (strcmp(input, "s") == 0 || strcmp(input, "S") == 0)
         {
-            i = DeleteLastValue(v, i); // Recule l'index de saisie et met la case ‡ 0
+            i = DeleteLastValue(v, i); // Recule l'index de saisie et met la case √† 0
             continue;
         }
 
         // Commande de modification
         if (strcmp(input, "a") == 0 || strcmp(input, "A") == 0)
         {
-            ModifiedLastValue(v, i); // Modifie la derniËre case saisie
+            ModifiedLastValue(v, i); // Modifie la derni√®re case saisie
             continue;
         }
 
         // Conversion du texte en entier si ce n'est pas une commande
         int val = atoi(input);
 
-        // 1. VÈrification des limites
+        // 1. V√©rification des limites
         if (val < minCourant || val > maxCourant)
         {
             printf("Erreur : Le numero %d est hors limites !\n", val);
             continue;
         }
 
-        // 2. VÈrification des doublons (uniquement par rapport aux numÈros dÈj‡ saisis)
+        // 2. V√©rification des doublons (uniquement par rapport aux num√©ros d√©j√† saisis)
         bool duplicate = false;
         for (int j = 0; j < i; j++)
         {
@@ -88,7 +87,7 @@ void InsertValue(str_Value* v, str_Rules* r)
             }
         }
 
-        // Si tout est correct, on enregistre et on passe au numÈro suivant
+        // Si tout est correct, on enregistre et on passe au num√©ro suivant
         if (!duplicate)
         {
             v->tbValue[i] = val;
@@ -106,41 +105,41 @@ void InsertValue(str_Value* v, str_Rules* r)
 }
 
 // Fonction
-// nom fonction		: 
-// paramËtre In		: 
-// paramËtre out	: newIndex
-// paramËtre in/out	: str_Value* v, Nbelement
+// nom fonction		: DeleteLastValue
+// param√®tre In		: 
+// param√®tre out	: newIndex
+// param√®tre in/out	: str_Value* v, Nbelement
 // description		: Suppession de la dernire valeur entree
 //----------------------------------------------------------------------------------
 int DeleteLastValue(str_Value* v, char Nbelement)
 {
 	int newIndex;
-	// SÈcuritÈ : Si le tableau est dÈj‡ vide (0 ÈlÈment), on ne peut rien supprimer
+	// S√©curit√© : Si le tableau est d√©j√† vide (0 √©l√©ment), on ne peut rien supprimer
 	if (Nbelement <= 0)
 	{
 		printf("Aucun numero a supprimer dans la saisie actuelle.\n");
-		return 0; // Le nouvel index reste ‡ 0
+		return 0; // Le nouvel index reste √† 0
 	}
 
-	// On remet ‡ 0 la derniËre case remplie (l'indice est Nbelement - 1)
+	// On remet √† 0 la derni√®re case remplie (l'indice est Nbelement - 1)
 	v->tbValue[Nbelement - 1] = 0;
 
-	// On calcule le nouvel index (le nombre d'ÈlÈments diminue de 1)
+	// On calcule le nouvel index (le nombre d'√©l√©ments diminue de 1)
 	newIndex = Nbelement - 1;
 
 	return newIndex;
 }
 
 // Fonction
-// nom fonction		: 
-// paramËtre In		: 
-// paramËtre out	: 
-// paramËtre in/out	: str_Value* v, Nbelement
+// nom fonction		: ModifiedLastValue
+// param√®tre In		: 
+// param√®tre out	: 
+// param√®tre in/out	: str_Value* v, Nbelement
 // description		: Modification de la derniere valeur entree
 //----------------------------------------------------------------------------------
 void ModifiedLastValue(str_Value* v, char Nbelement)
 {
-	// SÈcuritÈ : Si le tableau est dÈj‡ vide (0 ÈlÈment), on ne peut rien supprimer
+	// S√©curit√© : Si le tableau est d√©j√† vide (0 √©l√©ment), on ne peut rien supprimer
 	if (Nbelement <= 0)
 	{
 		printf("Aucun numero a modifier dans la saisie actuelle.\n");
@@ -154,72 +153,104 @@ void ModifiedLastValue(str_Value* v, char Nbelement)
 	}
 }
 
-int MostWinning(str_Value* v, int nbNumbers, int valMin, int valMax)
-{
-    // Tableau de frÈquence d'apparition de la valeur
-    int freq[256] = { 0 };
 
-    // Parcours de tout líhistorique
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include "LotoRules.h"
+#include "GestionLoto.h"
+#include "GestionValeurlotoGagnante.h"
+
+// Fonction
+// nom fonction		: MostWinning
+// param√®tre In		: str_Value* v, nbNumbers, str_Rules* r, rank
+// param√®tre out	: bestVal
+// description		: Recherche le X-√®me (rank) num√©ro le plus gagnant
+//----------------------------------------------------------------------------------
+int MostWinning(str_Value* v, int nbNumbers, str_Rules* r, int rank)
+{
+    int freq[1000] = { 0 };
+
+    // 1. Parcours de tout l‚Äôhistorique pour compter les fr√©quences
     for (int i = 0; i < v->nbHistoRows; i++)
     {
         for (int j = 0; j < nbNumbers; j++)
         {
             int val = v->tbHistoTirage[i][j];
-            if (val >= valMin && val <= valMax)
+            if (val >= r->ValMin && val <= r->ValMax)
                 freq[val]++;
         }
     }
-
-   // Initialisation de la meilleure valeur a la valeur minimum
-    int bestVal = valMin;
-    // Initialisation de la meilleure frÈquence a une petite valeur pour etre sur d'etre plus grand
+    int bestVal = r->ValMin;
     int bestFreq = -1;
 
-    // Recherche de la valeur la plus frÈquente
-    for (int n = valMin; n <= valMax; n++)
+    // 2. Recherche du num√©ro le plus fr√©quent pas encore s√©lectionn√© dans les rangs pr√©c√©dents
+    for (int n = r->ValMin; n <= r->ValMax; n++)
     {
-        if (freq[n] > bestFreq)
+        bool dejaChoisi = false;
+        for (int k = 0; k < rank; k++)
+        {
+            if (v->tbMostWinning[k] == n)
+            {
+                dejaChoisi = true;
+                break;
+            }
+        }
+
+        // Si le num√©ro n'a pas encore √©t√© pris et poss√®de une meilleure fr√©quence
+        if (!dejaChoisi && freq[n] > bestFreq)
         {
             bestFreq = freq[n];
             bestVal = n;
         }
     }
-
-    // Retourne la valeur la plus frÈquente
     return bestVal;
 }
 
-int LeastWinning(str_Value* v, int nbNumbers, int valMin, int valMax)
-{
-    // Tableau de frÈquence d'apparition de la valeur
-    int freq[256] = { 0 };
 
-    // Parcours de tout líhistorique
+// Fonction
+// nom fonction		: LeastWinning
+// param√®tre In		: str_Value* v, nbNumbers, str_Rules* r, rank
+// param√®tre out	: worstVal
+// description		: Recherche le X-√®me (rank) num√©ro le moins gagnant
+//----------------------------------------------------------------------------------
+int LeastWinning(str_Value* v, int nbNumbers, str_Rules* r, int rank)
+{
+    int freq[1000] = { 0 };
+
+    // 1. Parcours de tout l‚Äôhistorique 
     for (int i = 0; i < v->nbHistoRows; i++)
     {
         for (int j = 0; j < nbNumbers; j++)
         {
             int val = v->tbHistoTirage[i][j];
-            if (val >= valMin && val <= valMax)
+            if (val >= r->ValMin && val <= r->ValMax)
                 freq[val]++;
         }
     }
 
-    // Initialisation de la pire valeur a la valeur minimum
-    int worstVal = valMin;
-    // Initialisation de la pire frÈquence a une tres grande valeur pour etre sur d'etre plus petit
-    int worstFreq = 999999;
+    int worstVal = r->ValMin;
+    int worstFreq = 999999; // Initialisation haute pour la recherche de minimum
 
-    // Recherche de la valeur la moins frÈquente
-    for (int n = valMin; n <= valMax; n++)
+    // 2. Recherche du num√©ro le moins fr√©quent pas encore s√©lectionn√©
+    for (int n = r->ValMin; n <= r->ValMax; n++)
     {
-        if (freq[n] < worstFreq)
+        bool dejaChoisi = false;
+        for (int k = 0; k < rank; k++)
+        {
+            if (v->tbLeastWinning[k] == n)
+            {
+                dejaChoisi = true;
+                break;
+            }
+        }
+        // Si le num√©ro est libre et a une fr√©quence plus faible
+        if (!dejaChoisi && freq[n] < worstFreq)
         {
             worstFreq = freq[n];
             worstVal = n;
         }
     }
-
-    // Retourne la valeur la moins frÈquente
     return worstVal;
 }
