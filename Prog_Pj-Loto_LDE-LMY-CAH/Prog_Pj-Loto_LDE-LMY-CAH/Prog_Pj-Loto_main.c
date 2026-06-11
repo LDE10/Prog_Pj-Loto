@@ -65,6 +65,7 @@ int main()
                 printf("Nom du loto : ");
                 // configuration du fichier/loto
                 ConfigFile();                    
+                
                 // ouverture du stream en mode lecture
                 fp1 = fopen(FilePath, "r");
                 // allocation des tableaux
@@ -73,7 +74,7 @@ int main()
                 Value.tbMostWinning = (int*)malloc(6 * sizeof(int));
                 Value.tbLeastWinning = (int*)malloc(6 * sizeof(int));
                 // affiche le nombre de tirage déjà éffectué dans le fichier
-                AddTirageToHisto(&Value, NbCompl);
+                RecupHisto(&Value, fp1, NbCompl, InputUser);
                 for (int y = 0; y < 6; y++)
                 {
                     // trouve les 6 numéros sorti le plus souvent
@@ -107,10 +108,11 @@ int main()
         case 'T':
         case 't':
             printf("\nTirage pour %s\n", regle.NameLoto);
+            int Compl = (regle.NumCompl == 'o') ? 7 : 6;
             // vérification de si un stream est ouvert. empeche le tirage si aucun fichier est ouvert
             if (fp1 != NULL)
             {
-                // set une graine pour la fonction random dans Tirage
+                // Le reste de votre code (srand, ChoiceValue, Tirage...) reste identique
                 srand(time(NULL));
                 // valeurs entrées par l'utilisateur ou aléatoirement
                 ChoiceValue(Value.tbValue, simu, NbCompl, &regle);
@@ -127,6 +129,7 @@ int main()
                 AddTirageToHisto(&Value, NbCompl);
                 // alloue le tableau de win au nombre de numéro du loto
                 Value.tbWin = (int*)malloc(NbCompl * sizeof(int));
+                
                 // comparaison de numéro choisi et tiré
                 Win(&Value, &regle);
                 printf("\n");
