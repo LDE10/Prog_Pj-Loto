@@ -1,7 +1,7 @@
 //--------------------------------------------------------------------------//
 // Nom du projet		: Prog_pj-Loto
 // Nom du fichier		: GestionAffichage
-// Date de crÈation		: 18.05.2026
+// Date de cr√©ation		: 18.05.2026
 // Date de modification : 
 //
 // Auteur				: LDE
@@ -14,30 +14,27 @@
 //-- librairie standard --//
 #include <stdio.h>
 #include <string.h>
-//Librairie perso
+//librairie perso
 #include "GestionAffichage.h"
 
 
-
-// Fonction
-// nom fonction		: ValG
-// paramËtre In		: tbMostWinning, tbLeastWinning
-// paramËtre out	: -
-// paramËtre in/out	: -
-// description		: Afficher le chiffre le plus et moins gagnant
+// fonction
+// nom fonction  : ValG
+// param√®tre In  : tbMostWinning, tbLeastWinning
+// param√®tre out : -
+// param√®tre in/out : -
+// description  : Affiche le num√©ro les plus sortie et le moins sorti
 void ValG(int* tbMostWinning, int* tbLeastWinning)
 {
 	printf("Le chiffre le plus gagnant est %d\n",tbMostWinning[0]);
 	printf("Le chiffre le moins gagnant est %d\n", tbLeastWinning[0]);
 }
-
-
-// Fonction
-// nom fonction		: Bestchiffres
-// paramËtre In		: tbMostWinning, tbLeastWinning
-// paramËtre out	: -
-// paramËtre in/out	: -
-// description		: Afficher les chiffres les plus et moins gagnant
+// fonction
+// nom fonction  : Bestchiffres
+// param√®tre In  : tbMostWinning, tbLeastWinning
+// param√®tre out : -
+// param√®tre in/out : -
+// description  : Afficher les chiffres les plus et moins gagnant
 void Bestchiffres(int* tbMostWinning, int* tbLeastWinning)
 {
 	printf("les 6 meilleurs chiffres sorties le plus souvent sont\n %d, %d, %d, %d, %d, %d\n",
