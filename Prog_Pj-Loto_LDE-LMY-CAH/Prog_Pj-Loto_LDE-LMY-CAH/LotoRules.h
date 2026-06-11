@@ -1,42 +1,44 @@
 //-----------------------------------------------------------------------------------//
-// Nom du projet 		: Prog_Pj-Loto
-// Nom du fichier 		: LotoRules.c
+// Nom du projet 		: ProjetLoto
+// Nom du fichier 		: GestionValeurlotoGagnante.h
 // Date de création 	: 18.05.2026
-// Date de modification : xx.xx.xxxx
+// Date de modification : 18.05.2026
 //
-// Auteur 				: CAH (Ch. Allenbach)
-//                        
+// Auteur 				: LMY (Loïc Marmy)
 //
-// Version 				: 0.0
-//
-// Description          : fonctions de configuration et de récupération des règles des lotos
+// Description          : programme principale 
 //
 //
-// 						  
+// Remarques			: lien pour les lib standard:
+//						-> https://www.rocq.inria.fr/secret/Anne.Canteaut/COURS_C/annexe.html
+//						-> 
+//
 //----------------------------------------------------------------------------------//
-#ifndef LOTORULES_H
-#define LOTORULES_H
+#ifndef GESTIONLOTO_H
+#define GESTIONLOTO_H
 typedef struct
 {
-	char* NameLoto;
-	int ValMax;
-	int ValMin;
-	char NumCompl;
-	int NumComplMax;
-	int NumComplMin;
-} str_Rules;
+    int* tbTirage;
+    int* tbMostWinning;
+    int* tbLeastWinning;
+    int* tbValue;
+    int* tbWin;
+    int** tbHistoTirage; // Tableau dynamique à 2 dimensions [lignes][colonnes]
+    int nbHistoRows;     // Nombre de tirages stockés dans l'historique
+} str_Value;
 
-extern str_Rules regle;
-
-extern char NbCompl;
-
-extern char FilePath[100];
-extern char length;
-extern char Name[100];
-extern char* strtxt;
+extern str_Value Value;
 
 
-void ConfigRules(str_Rules* r);
-void RecupData(str_Rules* d, FILE* fp1);
-void WriteConfig(str_Rules* r, FILE* fp1);
+void ExistingFile();
+void ConfigFile();
+char ModeLoto(char* Mode);
+void ChoiceValue(int* tbValue, char Mode, char NbCompl, str_Rules* r);
+int Tirage(str_Rules* d, int* tbTirage, int LastVal);
+void Win(str_Value* v, str_Rules* r);
+void RecupHisto(str_Value* v, FILE* fp1, int nbNumbers, char InputUser);
+void AddTirageToHisto(str_Value* v, int nbNumbers);
+void SaveAllData(str_Rules* r, str_Value* v, FILE* fp1, int nbNumbers);
+void freetb();
+char Input();
 #endif
