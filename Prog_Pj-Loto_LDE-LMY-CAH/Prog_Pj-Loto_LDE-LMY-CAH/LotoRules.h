@@ -1,44 +1,42 @@
 //-----------------------------------------------------------------------------------//
-// Nom du projet 		: ProjetLoto
-// Nom du fichier 		: GestionValeurlotoGagnante.h
+// Nom du projet 		: Prog_Pj-Loto
+// Nom du fichier 		: LotoRules.c
 // Date de création 	: 18.05.2026
-// Date de modification : 18.05.2026
+// Date de modification : xx.xx.xxxx
 //
-// Auteur 				: LMY (Loïc Marmy)
+// Auteur 				: CAH (Ch. Allenbach)
+//                        
 //
-// Description          : programme principale 
+// Version 				: 0.0
+//
+// Description          : fonctions de configuration et de récupération des règles des lotos
 //
 //
-// Remarques			: lien pour les lib standard:
-//						-> https://www.rocq.inria.fr/secret/Anne.Canteaut/COURS_C/annexe.html
-//						-> 
-//
+// 						  
 //----------------------------------------------------------------------------------//
-#ifndef GESTIONLOTO_H
-#define GESTIONLOTO_H
+#ifndef LOTORULES_H
+#define LOTORULES_H
 typedef struct
 {
-    int* tbTirage;
-    int* tbMostWinning;
-    int* tbLeastWinning;
-    int* tbValue;
-    int* tbWin;
-    int** tbHistoTirage; // Tableau dynamique à 2 dimensions [lignes][colonnes]
-    int nbHistoRows;     // Nombre de tirages stockés dans l'historique
-} str_Value;
+	char* NameLoto;
+	int ValMax;
+	int ValMin;
+	char NumCompl;
+	int NumComplMax;
+	int NumComplMin;
+} str_Rules;
 
-extern str_Value Value;
+extern str_Rules regle;
+
+extern char NbCompl;
+
+extern char FilePath[100];
+extern char length;
+extern char Name[100];
+extern char* strtxt;
 
 
-void ExistingFile();
-void ConfigFile();
-char ModeLoto(char* Mode);
-void ChoiceValue(int* tbValue, char Mode, char NbCompl, str_Rules* r);
-int Tirage(str_Rules* d, int* tbTirage, int LastVal);
-void Win(str_Value* v, str_Rules* r);
-void RecupHisto(str_Value* v, FILE* fp1, int nbNumbers, char InputUser);
-void AddTirageToHisto(str_Value* v, int nbNumbers);
-void SaveAllData(str_Rules* r, str_Value* v, FILE* fp1, int nbNumbers);
-void freetb();
-char Input();
+void ConfigRules(str_Rules* r);
+void RecupData(str_Rules* d, FILE* fp1);
+void WriteConfig(str_Rules* r, FILE* fp1);
 #endif
